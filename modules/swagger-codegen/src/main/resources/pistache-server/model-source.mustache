@@ -111,7 +111,7 @@ void {{classname}}::fromJson(nlohmann::json& val)
 }
 
 
-{{#vars}}{{^isNotContainer}}{{{datatype}}}& {{classname}}::{{getter}}()
+{{#vars}}{{^isNotContainer}}{{{datatype}}} {{classname}}::{{getter}}() const
 {
     return m_{{name}};
 }
