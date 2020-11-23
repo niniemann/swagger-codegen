@@ -27,6 +27,7 @@ class {{declspec}} {{classname}} {
 public:
     {{classname}}(Pistache::Address addr);
     virtual ~{{classname}}() {};
+    void init(Pistache::Http::Endpoint::Options opts);
     void init(size_t thr);
     void start();
     void shutdown();

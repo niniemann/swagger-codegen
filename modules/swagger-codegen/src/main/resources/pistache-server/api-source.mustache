@@ -13,6 +13,12 @@ using namespace {{modelNamespace}};
     : httpEndpoint(std::make_shared<Pistache::Http::Endpoint>(addr))
 { };
 
+void {{classname}}::init(Pistache::Http::Endpoint::Options opts)
+{
+    httpEndpoint->init(opts);
+    setupRoutes();
+}
+
 void {{classname}}::init(size_t thr = 2) {
     auto opts = Pistache::Http::Endpoint::options()
         .threads(thr)
